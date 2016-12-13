@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+@import url(flexible.css);
+
+@import url(mobile.css);
+
+@import url(../lib/swiper-3.3.1.min.css);
+
+body,
+html {
+  font-family: "微软雅黑";
+  -webkit-tap-highlight-color: transparent;
+}
+
+header {
+  height: 1.34375rem;
+  background: #e4366b;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+header h2 {
+  font-size: 0.5625rem;
+  color: #fff;
+  text-align: center;
+  margin-left: 0.75rem;
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+header .back {
+  width: 0.84375rem;
+  height: 0.59375rem;
+  margin-left: 0.28125rem;
+  background: url(../img/back.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+header .go {
+  width: 1.75rem;
+  height: 0.859375rem;
+  margin-right: 0.28125rem;
+  background: url(../img/r-share.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+section {
+  width: 100%;
+  background: #f7f7f7;
+  height: 14.84375rem;
+}
+
+section .swiper-container {
+  width: 100%;
+  height: 14.84375rem;
+}
+
+section .swiper-container .swiper-wrapper {
+  width: 100%;
+  height: 14.84375rem;
+}
+
+section .swiper-container .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 14.84375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+section .swiper-container .swiper-wrapper .swiper-slide img {
+  width: 10rem;
+  height: 11.40625rem;
+}
+
+.swiper-container-horizontal .swiper-pagination-bullets {
+  bottom: 0.3125rem;
+}
+
+.swiper-container-horizontal .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 0.1875rem;
+}
+
+.swiper-pagination-bullet {
+  width: 0.25rem;
+  height: 0.25rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: #e4436f;
+}
+
+.bottom {
+  width: 100%;
+  height: 1.53125rem;
+  background: #56555d;
+}
+
+.bottom ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.bottom li {
+  width: 33.3%;
+  height: 1.53125rem;
+  font-size: 0.59375rem;
+  color: #fff;
+  text-align: center;
+  line-height: 1.53125rem;
+  border-right: 1px solid #282828;
+}
+
+.bottom li:nth-child(3) {
+  border-right: none;
+}
+
+.bottom .active {
+  border-top: 12px solid #e4366b;
+}

@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+@import url(flexible.css);
+
+@import url(mobile.css);
+
+body,
+html {
+  font-family: "微软雅黑";
+  -webkit-tap-highlight-color: transparent;
+}
+
+header {
+  height: 1.34375rem;
+  line-height: 1.34375rem;
+  background: #e4366b;
+  text-indent: -1.0625rem;
+  font-size: 0.5625rem;
+  color: #fff;
+  text-align: center;
+}
+
+header .back {
+  float: left;
+  width: 0.84375rem;
+  height: 0.59375rem;
+  margin-left: 0.28125rem;
+  margin-top: 0.375rem;
+  background: url(../img/back.png) no-repeat;
+  background-size: 0.84375rem 0.59375rem;
+}
+
+section {
+  width: 100%;
+  background: #f7f7f7;
+  padding: 0.46875rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 14.84375rem;
+}
+
+section .top {
+  width: 100%;
+  height: 5.625rem;
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 0.09375rem;
+  margin-bottom: 0.40625rem;
+}
+
+section .top ul {
+  width: 100%;
+}
+
+section .top li {
+  width: 96%;
+  height: 1.40625rem;
+  line-height: 1.40625rem;
+  font-size: 0.53125rem;
+  text-indent: 0.28125rem;
+  color: #000;
+  background: url(../img/r-arrow.png) right no-repeat;
+  background-size: 0.390625rem 0.46875rem;
+  border-bottom: 1px solid #dedede;
+}
+
+section .top li:nth-child(4){
+  border-bottom: none;
+}
+section .top .nob{
+  border: none;
+}
+
+section .bot {
+  width: 100%;
+  height: 2.84375rem;
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 0.09375rem;
+}
+
+section .bot ul {
+  width: 100%;
+}
+
+section .bot li {
+  width: 96%;
+  height: 1.40625rem;
+  line-height: 1.40625rem;
+  font-size: 0.53125rem;
+  text-indent: 0.28125rem;
+  color: #000;
+  background: url(../img/r-arrow.png) right no-repeat;
+  background-size: 0.390625rem 0.46875rem;
+  border-bottom: 1px solid #dedede;
+}
+section .bot li:nth-child(2){
+	border: none;
+}
+
+section .bot li:nth-last-child {
+  border: none;
+}
+
+.quit {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 1.40625rem;
+  background: #e73a6f;
+  text-align: center;
+  line-height: 0.78125rem;
+  color: #fff;
+  font-size: 0.5625rem;
+  margin-top: 0.28125rem;
+  font-family: "微软雅黑";
+}

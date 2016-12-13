@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+@import url(flexible.css);
+
+@import url(mobile.css);
+
+@import url(../lib/css/layui.css);
+
+@import url(../lib/css/modules/laydate/laydate.css);
+
+@import url(../lib/css/modules/code.css);
+
+@import url(../lib/css/modules/layer/default/layer.css);
+
+body,
+html {
+  font-family: "微软雅黑";
+  -webkit-tap-highlight-color: transparent;
+}
+
+header {
+  height: 1.34375rem;
+  background: #e4366b;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+header h2 {
+  font-size: 0.5625rem;
+  color: #fff;
+  text-align: center;
+  margin-left: 0.75rem;
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+header .back {
+  width: 0.84375rem;
+  height: 0.59375rem;
+  margin-left: 0.28125rem;
+  background: url(../img/back.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+header .go {
+  width: 1.75rem;
+  height: 0.859375rem;
+  margin-right: 0.28125rem;
+  background: url(../img/r-go.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+section {
+  width: 100%;
+  background: #f7f7f7;
+  height: 14.84375rem;
+  overflow-y: scroll;
+}
+
+section .count {
+  width: 100%;
+  height: 1.40625rem;
+  background: #333;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+section .count p {
+  font-size: 0.46875rem;
+  color: #fff;
+}
+
+section .count .total {
+  color: #e6356b;
+}
+
+section .good {
+  width: 100%;
+  height: 3.625rem;
+  border-bottom: 2px solid #cbcbcb;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.46875rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+section .good .pic {
+  width: 2.71875rem;
+  height: 2.71875rem;
+}
+
+section .good .pic img {
+  width: 100%;
+  height: 100%;
+}
+
+section .good .info {
+  width: 6.03125rem;
+  height: 2.71875rem;
+  margin: 0.09375rem 0 0 0.65625rem;
+}
+
+section .good .info p {
+  font-size: 0.40625rem;
+  color: #000;
+}
+
+section .good .info p:nth-child(1) {
+  position: relative;
+}
+
+section .good .info p:nth-child(3) {
+  margin: 0.09375rem 0;
+}
+
+section .good .info p:nth-child(4) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+section .good .info .del-btn {
+  width: 0.46875rem;
+  height: 0.546875rem;
+  *display: inline;
+  *zoom: 1;
+  background: url(../img/r-delbtn.png) center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+section .good .info .price {
+  color: #e5376a;
+}
+
+section .good .info .size {
+  float: right;
+  margin-right: 0.09375rem;
+}
+
+section .good .info .add {
+  width: 0.90625rem;
+  height: 0.65625rem;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  background: url(../img/r-add.png) center no-repeat;
+  background-size: 100% 100%;
+}
+
+section .good .info .dec {
+  width: 0.90625rem;
+  height: 0.65625rem;
+  margin-left: 0.1875rem;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  background: url(../img/r-dec.png) center no-repeat;
+  background-size: 100% 100%;
+}
+
+section .good .info .all {
+  width: 1.15625rem;
+  height: 0.625rem;
+  margin: 0 0.1875rem;
+  text-align: center;
+  line-height: 0.625rem;
+  border: 1px solid #ccc;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border-radius: 0.09375rem;
+  -webkit-box-shadow: inset 0 0.03125rem 0.015625rem 0.015625rem #898a96;
+  box-shadow: inset 0 0.03125rem 0.015625rem 0.015625rem #898a96;
+}
+
+.layui-layer-dialog .layui-layer-content {
+  font-size: 0.5625rem;
+  line-height: 2.03125rem;
+}
