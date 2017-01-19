@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<title>招聘</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body,html{
+				width: 100%;
+				height: 100%;
+			}
+			.swiper-container,.swiper-wrapper{
+				width: 100%;
+				height: 100%;
+			}
+			.swiper-slide{
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				color:#fff;
+				font-size: 60px;
+			}
+			.slide01{
+				background: #083846;
+			}
+			.slide02{
+				background: #9261BF;
+			}
+			.slide03{
+				background: #F3533C;
+			}
+			.slide04{
+				background: #FFBF50;
+			}
+			.slide05{
+				background: #083846;
+			}
+/*			.swiper-slide-prev img{
+				display: none;
+			}
+			.swiper-slide-next img{
+				display: none;
+			}*/
+/*			.swiper-slide-prev .swiper-slide img{
+				display: none;
+			}
+			.swiper-slide-next .swiper-slide img{
+				display: none;
+			}
+			.swiper-slide-active .swiper-slide img{
+				display: none;
+			}*/
+/*			.swiper-slide-active img{
+				display: inline-block;
+			}*/
+/*			.swiper-slide-active .swiper-slide-prev img{
+				display: none;
+			}
+			.swiper-slide-active .swiper-slide-next img{
+				display: none;
+			}
+			.swiper-slide-active .swiper-slide-active img{
+				display: inline-block;
+			}*/
+			
+			.swiper-slide-active .cover{
+				animation: cover .6s 0s ease-in-out both;
+			}
+			.swiper-slide-active .word{
+				animation: word .6s 0s ease-in-out both;
+			}
+			.swiper-slide-active .icon{
+				animation: icon 2s 0s ease-in-out infinite both;
+			}
+			.swiper-slide .cover{
+				height:auto;
+				width:248px;
+				margin-top: -248px;
+				animation: cover .6s 0s ease-in-out both;
+			}
+			.swiper-slide .word{
+				height:auto;
+				width:185px;
+				position:absolute;
+				left:50%;
+				top:62%;
+				margin-left:-92px;
+				animation: word .6s 0s ease-in-out both;
+			}
+			.swiper-slide .icon{
+				height:auto;
+				width:25px;
+				position:absolute;
+				left:50%;
+				top:93%;
+				margin-left:-12px;
+				animation: icon 2s 0s ease-in-out infinite both;
+			}
+			@keyframes cover{
+				from{margin-top: -240px;}
+				to{margin-top: 0px;}
+			}
+			@keyframes word{
+				from{margin-left:-300px;}
+				to{margin-left:-92px;}
+			}
+			@keyframes icon{
+				from{top: 93%;}
+				to{top: 95%;}
+			}
+
+			.word2{
+				height:auto;
+				width:158px;
+				position:absolute;
+				left:50%;
+				top:2%;
+				margin-left:-79px;
+				z-index:2;
+				animation: word2 .6s 0s ease both;
+			}
+			.circle{
+				height:auto;
+				width:240px;
+				position:absolute;
+				left:50%;
+				top:28%;
+				margin-left:-120px;
+				animation: circle 1.2s ease-in-out both;
+			}
+			.people{
+				height:auto;
+				width:241px;
+				position:absolute;
+				left:50%;
+				top:36%;
+				margin-left:-120px;
+				animation: people .6s ease both;
+			}
+			.check{
+				height:auto;
+				width:142px;
+				position:absolute;
+				left:50%;
+				top:82%;
+				margin-left:-71px;
+				animation: develop .7s ease both;
+			}
+			.develop{
+				height:auto;
+				width:248px;
+				position:absolute;
+				left:50%;
+				top:8%;
+				margin-left:-110px;
+				animation: develop .7s ease both;
+			}
+/*			.swiper-slide-active .word2{
+				animation: word2 .6s 0s ease both;
+			}*/
+			.introduce{
+				height:auto;
+				width:293px;
+				position:absolute;
+				left:50%;
+				top:5%;
+				margin-left:-146px;
+				animation: flipInLeft .5s both ease-out;
+			}
+			.btn_develop{
+				height:auto;width:260px;
+				position:absolute;
+				left:50%;
+				top:75%;
+				margin-left:-130px;
+				animation: flipInLeft .5s both ease-out;
+			}
+			@keyframes word2{
+				from{top:16%;}
+				to{top:2%;}
+			}
+			@keyframes circle {
+				0% { -webkit-transform: translateY(-80%);-webkit-opacity:0.1;
+					transform: translateY(-80%);opacity:0.1;}
+				5% { -webkit-transform: translateY(-80%);-webkit-opacity:0.3;
+					transform: translateY(-80%);opacity:0.3;}
+				35% { -webkit-transform: translateY(10%);-webkit-opacity:1;
+					transform: translateY(10%);opacity:1;}
+				60% { -webkit-transform: translateY(-13%);transform: translateY(-13%);}
+				65% { -webkit-transform: translateY(-13%);transform: translateY(-13%);}
+				100% { -webkit-transform: translateY(0%);transform: translateY(0%);}
+			}
+			@keyframes people {
+				from { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+			}
+			@keyframes develop {
+	from { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8); }
+			}
+			@keyframes flipInLeft {
+			from { -webkit-transform: translateZ(-1000px) rotateY(-90deg); transform: translateZ(-1000px) 			rotateY(-90deg); opacity: 0.2; }
+		}
+			.wd{
+				height:auto;
+				width:166px;
+				position:absolute;
+				left:50%;
+				top:2%;
+				margin-left:-86px;
+				z-index:2;
+			}
+			.cd{
+				height:auto;
+				width:250px;
+				position:absolute;
+				left:50%;
+				top:30%;
+				margin-left:-125px;
+			}
+			.pd{
+				height:auto;
+				width:172px;
+				position:absolute;
+				left:50%;
+				top:28%;
+				margin-left:-55px;
+			}
+			.chd{
+				height:auto;
+				width:142px;
+				position:absolute;
+				left:50%;
+				top:82%;
+				margin-left:-71px;
+			}
+			.ind{
+				height:auto;
+				width:296px;
+				position:absolute;
+				left:50%;
+				top:5%;
+				margin-left:-148px;
+			}
+			.btd{
+				height:auto;
+				width:260px;
+				position:absolute;
+				left:50%;
+				top:75%;
+				margin-left:-130px;
+			}
+			.wpr{
+				height:auto;
+				width:162px;
+				position:absolute;
+				left:50%;
+				top:2%;
+				margin-left:-84px;
+				z-index:2;
+			}
+			.cpr{
+				height:auto;
+				width:230px;
+				position:absolute;
+				left:50%;
+				top:28%;
+				margin-left:-115px;
+			}
+			.ppr{
+				height:auto;
+				width:161px;
+				position:absolute;
+				left:50%;
+				top:28%;
+				margin-left:-80px;
+			}
+			.chp{
+				height:auto;
+				width:142px;
+				position:absolute;
+				left:50%;
+				top:82%;
+				margin-left:-71px;
+			}
+			.swiper-container-horizontal >.swiper-pagination-bullets{
+				bottom: 80px;
+			}
+			.swiper-pagination-bullet{
+				width: 6px;
+				height: 6px;
+			}
+			.swiper-pagination-bullet-active{
+				background: #fff;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="swiper-container" id="swiper1">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide slide01">
+					<img class="cover" src="example3/img/cover.png"/>
+					<img class="word" src="example3/img/wording_cover.png"/>
+					<img class="icon" src="img/icon_up.png"/>
+				</div>
+				<div class="swiper-slide">
+					<div class="swiper-container" id="swiper2">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide  slide02">
+								<img class="word2" src="example3/img/wording.png"/>
+								<img class="circle" src="example3/img/circle.png"/>
+								<img class="people" src="example3/img/people.png"/>
+								<img class="check" src="example3/img/check_develop.png"/>
+								<img class="develop" src="img/floating_develop.png"/>
+								<img class="icon" src="img/icon_up.png"/>
+							</div>
+							<div class="swiper-slide slide02">
+								<img class="introduce" src="img/introduction.png"/>
+								<img class="btn_develop" src="example3/img/btn_develop.png"/>
+								<img class="icon" src="img/icon_up.png"/>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+				<div class="swiper-slide slide03">
+					<div class="swiper-container" id="swiper3">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img class="wd" src="example3/img/wording_design.png"/>
+								<img class="cd" src="example3/img/circle-design.png"/>
+								<img class="pd" src="example3/img/people_design.png"/>
+								<img class="chd" src="example3/img/check_design.png"/>
+								<img class="icon" src="img/icon_up.png"/>
+							</div>
+							<div class="swiper-slide">
+								<img class="ind" src="example3/img/introduction_design.png"/>
+								<img class="btd" src="img/btn_design.png"/>
+								<img class="icon" src="img/icon_up.png"/>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+				<div class="swiper-slide slide04">
+					<div class="swiper-container" id="swiper4">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img class="wpr" src="example3/img/wording_production.png"/>
+								<img class="cpr" src="example3/img/circle-production.png"/>
+								<img class="ppr" src="example3/img/people_production.png"/>
+								<img class="chp" src="example3/img/check_production.png"/>
+								<img class="icon" src="img/icon_up.png"/>
+							</div>
+							<div class="swiper-slide">item2</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+				<div class="swiper-slide slide05">slide05</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var myswiper = new Swiper("#swiper1",{
+				direction:"vertical",
+				resistanceRatio: 0,
+				onSlideChangeStart: function(swiper){
+     				$(".slide02").find("img").css("display","none");
+     				$(".slide01").find("img").css("display","none");
+     				$(".swiper-pagination-bullets").css("display","none");
+   				},
+   				/*onTouchMove: function(swiper){
+     				$(".slide02").find("img").css("display","none");
+     				$(".slide01").find("img").css("display","none");
+     				$(".swiper-pagination-bullets").css("display","none");
+   				},*/
+   				/*onTouchEnd: function(swiper){
+     				$(".slide02").find("img").css("display","inline-block");
+     				$(".slide01").find("img").css("display","inline-block");
+					$(".swiper-pagination-bullets").css("display","block");
+   				},*/
+   				onSlideChangeEnd: function(swiper){
+					$(".slide02").find("img").css("display","inline-block");
+					$(".slide01").find("img").css("display","inline-block");
+					$(".swiper-pagination-bullets").css("display","block");
+   				}
+			}
+		)
+		var myswiper = new Swiper("#swiper2",{
+				resistanceRatio: 0,
+				pagination : '.swiper-pagination',//添加分页器
+				onSlideChangeStart: function(swiper){
+     				$(".slide02").find("img").css("display","none");
+     				$(".swiper-pagination-bullets").css("display","none");
+   				},
+   				onTouchMove: function(swiper){
+     				$(".slide02").find("img").css("display","none");
+     				$(".swiper-pagination-bullets").css("display","none");
+   				},
+   				onTouchEnd: function(swiper){
+     				$(".slide02").find("img").css("display","inline-block");
+					$(".swiper-pagination-bullets").css("display","block");
+   				},
+   				onSlideChangeEnd: function(swiper){
+					$(".slide02").find("img").css("display","inline-block");
+					$(".swiper-pagination-bullets").css("display","block");
+   				}
+			}
+		)
+		var myswiper = new Swiper("#swiper3",{
+				resistanceRatio: 0,
+				pagination : '.swiper-pagination',//添加分页器
+			}
+		)
+		var myswiper = new Swiper("#swiper4",{
+				resistanceRatio: 0,
+				pagination : '.swiper-pagination',//添加分页器
+			}
+		)
+			
+	</script>
+</html>
