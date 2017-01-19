@@ -1,0 +1,119 @@
+nav{
+	height: 70rpx;
+    width: 100%;
+    background: #f3f3f3;
+    font-family: "微软雅黑";
+}
+nav ul{
+	width: 100%;
+	display: flex;
+}
+nav li{
+    box-sizing: border-box;
+    font-size: 24rpx;
+    width: 25%;
+    text-align: center;
+    height: 70rpx;
+    line-height: 70rpx;
+    color: #8d8d8d;
+    background: #f3f3f3;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 10rpx solid #f3f3f3;
+}
+.active{
+	color: #02968a;
+    border-color: #02968a;
+}
+
+.banner{
+	width: 100%;
+    height: 375rpx;
+    position: relative;
+}
+.banner-swiper{
+	width: 100%;
+    height: 375rpx;
+}
+.banner-swiper .image{
+	width: 100%;
+    height: 375rpx;
+}
+.bannerpage{
+	position: absolute;
+	bottom: 30rpx;
+	left:0;
+	width: 100%;
+	height: 30rpx;
+	display: flex;
+	justify-content: flex-end;
+	padding: 0 60rpx;
+	box-sizing: border-box;
+}
+.bannerpage view{
+	background: #fff;
+	width: 20rpx;
+	height: 20rpx;
+	border-radius: 50%;
+	margin: 0 10rpx;
+}
+.bannerpage .bannerActive{
+	background: #02968a;
+}
+.main{
+	width: 100%;
+}
+.contentSwiper{
+	width: 100%;
+	height:800rpx;
+}
+.contentSwiper swiper-item{
+	height:770rpx;
+}
+.contentSwiper scroll-view{
+	height:770rpx;
+}
+navigator{
+	height:200rpx;
+	padding:20rpx;
+	box-sizing:border-box;
+	display:flex;
+	border-bottom:1rpx solid #ccc;
+}
+navigator image{
+	height:160rpx;
+	width:200rpx;
+}
+navigator .dl{
+	flex:1;
+	height:160rpx;
+	padding:20rpx;
+}
+navigator .dl .title{
+	width: 100%;
+    height: 100rpx;
+    line-height: 30rpx;
+    font-size:32rpx;
+    font-family: "microsoft yahei";
+    color:#000;
+    display:-webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+navigator .dl text{
+	padding:8rpx;
+	height:40rpx;
+	font-size:24rpx;
+}
+
+.loading{
+	width:100%;
+	height:30rpx;
+	background:#fff;	
+}
+.loadingBtn{
+	border:none;
+	background:#fff;
+}

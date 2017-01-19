@@ -1,0 +1,64 @@
+<view class="box">
+	<view>
+		<loading hidden="{{loadBtn}}">
+			<text>努力加载中...</text>
+		</loading>
+	</view>
+	<nav>
+		<ul>
+			<li wx:for="{{navData}}" wx:key="{{index}}" class="{{current==index?'active':''}}" catchtap="liChange" data-index="{{index}}">{{item}}</li>
+		</ul>
+	</nav>
+
+	<swiper class="banner" autoplay="true" bindchange="bannerSwiperChange" circular="true" current="{{bannerIndex}}">
+		<block wx:for="{{bannerList}}" wx:key="{{item.id}}">
+			<swiper-item bindtap="gotoDetail" class="banner-swiper">
+				<image class="image" src="{{item.imgUrl}}" data-title="{{item.title}}"></image>
+			</swiper-item>
+		</block>
+
+		<view class="bannerpage">
+			<block wx:for="{{bannerPage}}" wx:key="{{item}}">
+				<view data-id="{{index}}" class="{{bannerIndex==index?'bannerActive':''}}" bindtap="bannerIconChange"></view>
+			</block>
+		</view>
+	</swiper>
+
+	<view class="main">
+		<swiper class="contentSwiper" bindchange="mainSwiperChange" current="{{current}}">
+			<block wx:for="{{listData}}" wx:key="{{index}}" wx:for-item="it" wx:for-index="oIndex">
+				<swiper-item>
+					<scroll-view
+					bindscrolltoupper="upper"
+					bindscrolltolower="lower"
+					scroll-top="0"
+					upper-threshold="0"
+					lower-threshold="0"
+					scroll-y="true"
+					data-index="{{oIndex}}"
+					>
+					<view class="loading" hidden="{{scrollIndexT==oIndex?false:true}}">
+						<button loading="true">刷新中..</button>
+					</view>
+					
+						<block wx:for="{{it}}" wx:key="{{index}}" wx:for-item="dItem">
+							<navigator url="../detail/detail?title={dItem.title}">
+								<image src="{{dItem.imgUrl}}"></image>
+								<view class="dl">
+									<view class="title">{{dItem.title}}</view>
+									<text>作者:{{dItem.author}}</text>
+									<text>来源:{{dItem.source}}</text>
+									<text>点击:{{dItem.clickNum}}</text>
+								</view>
+							</navigator>
+						</block>
+						<view class="loading" hidden="{{scrollIndexB==oIndex?false:true}}">
+							<button class="loadingBtn" loading="true">加载更多..</button>
+						</view>
+					</scroll-view>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+
+</view>

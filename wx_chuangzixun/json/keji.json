@@ -1,0 +1,43 @@
+[	{
+		"id":"101",
+		"kejiPic": "img/keji_01.png",
+		"title": "关于苹果IOS9正式版，你必须知道的都在这里",
+		"article":"今日凌晨，苹果正式面向所有用户推送了IOS9正式版，从6月份WWDC2015发布以来，IOS9经历了开发者预览版、公测版"
+	}, {
+		"id":"102",
+		"kejiPic": "img/keji_02.png",
+		"title": "因发现Bug苹果最后一刻推迟 watchOS2的发布",
+		"article":"苹果的手机更新换代速度并不快，但往往是时尚手机的代名词，近几年的外观设计一直是手机的标杆。"
+	}, {
+		"id":"103",
+		"kejiPic": "img/keji_03.png",
+		"title": "这辆太空特斯拉，内部豪华吗？",
+		"article":"SpaceX 有一款或许会用于运送宇航员往返国际空间站的载人宇宙飞船 Crew Dragon。载人"
+	}, {
+		"id":"104",
+		"kejiPic": "img/keji_04.png",
+		"title": "安卓手表链 是怎么回事？",
+		"article":"这款iOS应用能够通过蓝牙和基于 Android Wear 的设备(就是安卓手表啦)进行通信,"
+	},
+	{
+		"id":"105",
+		"kejiPic": "img/keji_05.png",
+		"title": "Android 总被病毒扰，处理器杀毒解烦恼",
+		"article": "这是我们在安卓上发现的迄今为止影响最严重的手机病毒。第一、它是一款安装"
+	},{
+		"id":"106",
+		"kejiPic": "img/keji_06.png",
+		"title": "新iPhone终于要来了，不过邀请函",
+		"article": "iPhone中文网为大家提供iPhone7/iPhone7Plus报价信息,实时关注苹果iPhone7/iPhone7"
+	},{
+		"id":"107",
+		"kejiPic": "img/keji_07.png",
+		"title": "略惊悚：谷歌机器人林中跑步",
+		"article": "谷歌发布最新机器人Atlas:如人般行走自如 (来源:网易科技频道)有个机器人,他能够和"
+	},{
+		"id":"108",
+		"kejiPic": "img/keji_08.png",
+		"title": "如果用脑电流给iPhone充电，你要知道",
+		"article": "美国西北大学医学院最新研究结果显示颅磁刺激通过用磁脉冲(TranscranialMagnetic"
+	}
+]

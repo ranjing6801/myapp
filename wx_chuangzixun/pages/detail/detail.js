@@ -1,0 +1,15 @@
+Page({
+	data:{
+		title:""
+	},
+	onLoad(opt){
+		console.log(opt);
+		console.log(opt.title);
+		this.setData({
+			title:opt.title
+		})
+		wx.setNavigationBarTitle({
+			title:opt.title
+		})
+	}
+})

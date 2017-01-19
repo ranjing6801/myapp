@@ -1,0 +1,114 @@
+Page({
+	data:{
+		navData:["商业","应用","互联","观点"],
+		current:0,
+		bannerList:"",
+		listData:"",
+		bannerIndex:0,
+		bannerPage:[1,2,3,4,5],
+		loadBtn:false,
+		refresh:true,
+		loadMore:true,
+		scrollIndexT:"",
+		scrollIndexB:""
+	},
+	onLoad(){
+		var that = this;
+		/*wx.showToast({
+			title:"努力加载中...",
+			icon:"loading",
+			duration:2000
+		});*/
+		wx.request({
+			url:"http://huzisvn6666.applinzi.com/chuangzixun/app/json/tuijian_banner.json",
+			mehtod:"GET",
+			success:function(res){
+				//console.log(res.data);
+				setTimeout(()=>{
+					that.setData({
+					bannerList:res.data,
+					loadBtn:true
+					})
+				},2000)
+				
+				//wx.hideToast();
+			}
+		});
+		wx.request({
+			url:"https://huzisvn6666.applinzi.com/chuangzixun/app/json/tuijian_list.json",
+			mehtod:"GET",
+			success:function(res){
+				setTimeout(()=>{
+					that.setData({
+					listData:res.data
+					})
+				},1500)
+				
+			}
+		})
+	},
+	liChange(e){
+		this.setData({
+			current:e.target.dataset.index
+		})
+	},
+	bannerSwiperChange(e){
+		this.setData({
+			bannerIndex:e.detail.current
+		})
+	},
+	bannerIconChange(e){
+		this.setData({
+			bannerIndex:e.target.dataset.id
+		})
+	},
+	mainSwiperChange(e){
+		this.setData({
+			current:e.detail.current
+		})
+	},
+	upper(e){
+		console.log("upper");
+		var oIndex = e.target.dataset.index;
+		var that = this;
+		this.setData({
+			//refresh:false
+			  scrollIndexT:e.target.dataset.index
+		})
+		wx.request({
+			url:"http://huzisvn6666.applinzi.com/chuangzixun/app/json/refresh.json",
+			mehtod:"GET",
+			success:function(res){
+				console.log(res.data);
+				var fullItem = that.data.listData;
+				for(var i in fullItem){
+					if(i==oIndex){
+						fullItem[i] = fullItem[i].concat(res.data);
+						console.log("fullItem",fullItem);
+					}
+				}
+				setTimeout(()=>{
+					that.setData({
+						//refresh:true
+						listData:fullItem,
+						scrollIndexT:""
+					})
+				},2000)
+			}
+		})
+		
+	},
+	lower(e){
+		console.log("lower");
+		this.setData({
+			//loadMore:false
+			scrollIndexB:e.target.dataset.index
+		})
+		setTimeout(()=>{
+			this.setData({
+				//loadMore:true
+				//scrollIndexB:!scrollIndexB
+			})
+		},2000)
+	}
+})
